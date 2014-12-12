@@ -97,10 +97,59 @@ public class ProdavnicaIgracaka {
 	public String toString()
 	{
 		String strNiz = "";
-		for (int i=0; i<inventarIgracaka.length; i++)
+		for (int i=0; i<brojIgracaka; i++)
 		{
 			strNiz += inventarIgracaka[i] + "\n"; 
 		}
 		return strNiz;
+	}
+	
+	/**
+	 * Funkcija ispisuje objekte sa istim imenom
+	 * @param naziv
+	 */
+	
+	public void ispisiPoImenu(String naziv)
+	{
+		for (int i=0; i<brojIgracaka; i++)
+		{
+			if (naziv.equals(inventarIgracaka[i].getNaziv()))
+			{
+				System.out.println(inventarIgracaka[i]);
+			}
+		}
+	}
+	
+	/**
+	 * Funkcija ispisuje objekte sa istim dobnim ograničenjem
+	 * @param dobnoOgranicenje
+	 */
+	
+	public void ispisiDobnomOgranicenju(int dobnoOgranicenje)
+	{
+		for (int i=0; i<brojIgracaka; i++)
+		{
+			if (dobnoOgranicenje == inventarIgracaka[i].getDobroOgranicenje())
+			{
+				System.out.println(inventarIgracaka[i]);
+			}
+		}
+	}
+
+	/**
+	 * Funkcija ispisuje objekte sa istom godinom proizvodnje
+	 * @param godinaProizvodnje
+	 */
+	
+	
+	public void ispisiGodiniProizvodnje(int godinaProizvodnje)
+	{
+		for (int i=0; i<brojIgracaka; i++)
+		{
+			if (godinaProizvodnje == inventarIgracaka[i].getGodinaProizvodnje())
+			{
+				System.out.println(inventarIgracaka[i]);
+			}
+		}
 	}
 }
