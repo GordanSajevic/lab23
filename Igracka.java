@@ -76,6 +76,20 @@ public class Igracka {
 	}
 	
 	/**
+	 * Konstruktor za kopiranje
+	 * @param neki
+	 */
+	
+	public Igracka(Igracka neki)
+	{
+		this.naziv = neki.naziv;
+		this.tip = neki.tip;
+		this.cijena = neki.cijena;
+		this.dobnoOgranicenje = neki.dobnoOgranicenje;
+		this.godinaProizvodnje = neki.godinaProizvodnje;
+	}
+	
+	/**
 	 * Getter za naziv
 	 * @return
 	 */
